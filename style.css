@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  width: 4rem;
+  padding: 1rem;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator {
+  width: fit-content;
+  height: fit-content;
+  background-color: black;
+  padding: 0.5rem;
+}
+
+.output {
+  text-align: right;
+  background-color: lightgrey;
+  padding: 1rem;
+}
+
+.input {
+  width: fit-content;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+}
+
+.dot {
+  flex: 1;
+}
