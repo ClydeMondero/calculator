@@ -120,6 +120,7 @@ clearBtn.addEventListener("click", () => {
   resetVariables();
 });
 
+//* Saves the number and operator when an operetor is clicked
 const operatorBtns = document.querySelectorAll(".operator");
 
 let number = 0;
@@ -129,7 +130,7 @@ let anotherNumber = 0;
 //* Operator buttons
 operatorBtns.forEach((operatorBtn) => {
   operatorBtn.addEventListener("click", () => {
-    ////* Saves the number and operator
+    //normal operation
     if (operator == "") {
       cleared = false;
       dotBtn.disabled = false;
@@ -139,7 +140,7 @@ operatorBtns.forEach((operatorBtn) => {
 
       operator = operatorBtn.textContent;
       console.log("Operator: " + operator);
-    } //* Saves the other number and creates and object for operate function to process
+    } //chain operation
     else {
       cleared = false;
       dotBtn.disabled = false;
@@ -166,4 +167,23 @@ const dotBtn = document.querySelector(".dot");
 
 dotBtn.addEventListener("click", () => {
   dotBtn.disabled = true;
+});
+
+//* Saves the other number and creates and object for operate function to process
+const equalBtn = document.querySelector(".equals");
+
+equalBtn.addEventListener("click", () => {
+  dotBtn.disabled = false;
+  cleared = false;
+
+  anotherNumber = getNumber();
+
+  console.log("Another Number: " + anotherNumber);
+
+  let operation = new Operation(number, operator, anotherNumber);
+
+  displayedNumber.textContent = operate(operation);
+  console.log("Result: " + operate(operation));
+
+  resetVariables();
 });
