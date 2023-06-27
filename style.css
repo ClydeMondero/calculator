@@ -6,7 +6,7 @@
 
 body {
   background-color: lightgray;
-  color: #9c7480;
+  color: #e0d0d0;
   font-family: "Clash Grotesk", sans-serif;
 }
 
@@ -14,8 +14,13 @@ button {
   width: 4rem;
   padding: 1rem;
   border: none;
-  color: #9c7480;
+  color: #5f5b59;
   font-family: "Clash Grotesk", sans-serif;
+  cursor: pointer;
+}
+
+button:hover {
+  color: #e0d0d0;
 }
 
 .container {
@@ -29,7 +34,7 @@ button {
 .calculator {
   width: fit-content;
   height: fit-content;
-  background-color: #ffe5d9;
+  background-color: #3f3d3d;
   padding: 0.5rem;
 }
 
@@ -37,7 +42,7 @@ button {
   width: 100%;
   height: 4rem;
   text-align: right;
-  background-color: #f3c8b4;
+  background-color: #5f5b59;
   padding: 1rem;
 }
 
@@ -65,9 +70,9 @@ button {
 }
 
 .operator {
-  background-color: #eba4a3;
+  background-color: #e9bbbb;
 }
 
 .misc {
-  background-color: #f4acb7;
+  background-color: #f399a6;
 }
